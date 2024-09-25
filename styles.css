@@ -19,6 +19,8 @@ background-color: #e0f7fa;
 .container {
     width: 80%;
     margin: auto;
+    position: sticky;
+    top: 0;
 }
 
 header {
@@ -38,7 +40,36 @@ nav ul li a {
     color: #333;
     font-weight: bold;
 }
+h1 {
+  width: 24em;
+  margin: 0 auto;
+  border-right: 2px solid rgba(255, 255, 255, alpha0.75);
+  font-size: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);
+  /* Hapus animasi berkedip setelah animasi selesai */
+}
 
+.animasi_text{
+  animation: typing 2s steps(16) 1s 1 normal both, kedip 500ms steps(16) infinite normal;
+}
+
+@keyframes typing {
+  from {
+      width: 0;
+  }
+  to {
+      width: 9em;
+  }
+}
+@keyframes kedip {
+  from {
+      border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+border-right-color: transparent;  }
+}
 .hero {
     display: flex;
     justify-content: space-between;
